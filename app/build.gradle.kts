@@ -75,6 +75,8 @@ dependencies {
     implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
     implementation(project(mapOf("path" to ":app:features:profile:impl")))
     implementation(project(mapOf("path" to ":app:features:profile:publ")))
+    implementation(project(mapOf("path" to ":app:features:share:impl")))
+    implementation(project(mapOf("path" to ":app:features:share:publ")))
     implementation(project(mapOf("path" to ":core")))
 
     implementation(Lib.AndroidX.Compose.composeUi)

@@ -50,6 +50,7 @@
       <module name="MyEarnings.app" target="11" />
       <module name="MyEarnings.app.design_system" target="11" />
       <module name="MyEarnings.app.features.profile.impl" target="11" />
+      <module name="MyEarnings.app.features.share.impl" target="11" />
       <module name="myearnings.buildSrc" target="11" />
       <module name="MyEarnings.core" target="1.8" />
       <module name="MyEarnings.network" target="1.8" />
