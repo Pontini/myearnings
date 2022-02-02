@@ -18,3 +18,5 @@ local.properties
 /app/design_system/build/
 /app/features/profile/impl/build/
 /app/features/profile/publ/build/
+/app/features/share/publ/build/
+/app/features/share/impl/build/
