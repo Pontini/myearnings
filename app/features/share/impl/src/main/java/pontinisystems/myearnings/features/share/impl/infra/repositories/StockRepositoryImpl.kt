@@ -4,7 +4,7 @@ import pontinisystems.core.Either
 import pontinisystems.myearnings.features.share.impl.infra.database.dao.StockDao
 import pontinisystems.myearnings.features.share.publ.domain.entities.Stock
 import pontinisystems.myearnings.features.share.publ.domain.erros.Failure
-import pontinisystems.myearnings.features.share.publ.domain.repositories.StockRepository
+import pontinisystems.myearnings.features.share.publ.domain.repository.StockRepository
 
 class StockRepositoryImpl(
     private val dao: StockDao

@@ -2,6 +2,7 @@ package pontinisystems.myearnings.features.share.impl.infra.database
 
 import android.content.Context
 import androidx.room.Room
+import pontinisystems.myearnings.features.share.impl.infra.database.dao.ProfileDao
 import pontinisystems.myearnings.features.share.impl.infra.database.dao.StockDao
 
 class Database(context: Context) {
@@ -18,4 +19,7 @@ class Database(context: Context) {
         return db.stockDao()
     }
 
+    fun profileDao(): ProfileDao {
+        return db.profileDao()
+    }
 }

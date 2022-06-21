@@ -1,4 +1,4 @@
-package pontinisystems.myearnings.features.share.publ.domain.repositories
+package pontinisystems.myearnings.features.share.publ.domain.repository
 
 import pontinisystems.core.Either
 import pontinisystems.myearnings.features.share.publ.domain.entities.Stock
