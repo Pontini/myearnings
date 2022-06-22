@@ -6,8 +6,6 @@ import com.google.gson.annotations.SerializedName
 
 @Entity(tableName = "profile")
 data class ProfileEntity(
-    @PrimaryKey()
-    val id: String,
     val name: String,
     val lastName: String
 )

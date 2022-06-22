@@ -9,9 +9,9 @@ import androidx.compose.ui.graphics.Color
 
 
 private val CustomPalette = lightColors(
-    primary = Color.Yellow,
-    primaryVariant = Color.Yellow,
-    secondary = Color.Yellow,
+    primary = colorTeal500,
+    primaryVariant = colorTeal700,
+    secondary = colorTeal200,
     background = colorLavender,
     )
 

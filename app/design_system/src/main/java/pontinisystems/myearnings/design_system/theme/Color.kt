@@ -17,3 +17,7 @@ val colorBlueZodiac = Color(0XFF42425B)
 val color_cyprus = Color(0XFF0B2246)
 val color_cloud_burst = Color(0XFF213657)
 val color_black_pearl = Color(0XFF0208110)
+
+val colorTeal500 = Color(0XFF009688)
+val colorTeal700 = Color(0XFF00796B)
+val colorTeal200 = Color(0XFF80CBC4)

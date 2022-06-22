@@ -50,6 +50,7 @@ android {
 dependencies {
 
     implementation(project(mapOf("path" to ":core")))
+    implementation(project(mapOf("path" to ":core_android")))
     implementation(project(mapOf("path" to ":app:features:profile:publ")))
     implementation(project(mapOf("path" to ":app:features:share:publ")))
     implementation(project(mapOf("path" to ":app:design_system")))

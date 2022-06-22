@@ -1,3 +1,6 @@
 <resources>
     <string name="title_activity_create_profile">CreateProfileActivity</string>
+    <string name="insert_profile">Cadastro de perfil</string>
+    <string name="name">Nome</string>
+    <string name="last_name">Sobrenome</string>
 </resources>

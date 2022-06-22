@@ -7,7 +7,8 @@ include(
     ":app:features:share:impl",
     ":app:features:share:publ",
     ":network",
-    "core"
+    "core",
+    "core_android"
 )
 
 rootProject.name = "MyEarnings"
