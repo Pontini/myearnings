@@ -1,5 +1,6 @@
 package pontinisystems.myearnings.features.profile.impl.presentation.viewmodel
 
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch
@@ -10,22 +11,7 @@ import javax.inject.Inject
 class CreateProfileViewModel @Inject constructor(
     private val profileUseCases: ProfileUseCases,
     private val dispatcherProvider: DispactcherProvider,
-) : BaseViewModel<ProfileState, ProfileAction>(), ActionDispatcher<ProfileAction> {
-    override val viewState: ProfileState = ProfileState()
-
-    override fun dispatchViewAction(viewAction: ProfileAction) {
-        when (viewAction) {
-            is ProfileAction.OnInit -> {
-
-            }
-            is ProfileAction.OnClick -> {
-                val name = viewAction.name
-                val lastName = viewAction.lastName
-                insertProfile(name = name, lastName = lastName)
-            }
-        }
-    }
-
+) :ViewModel() {
     private fun insertProfile(name: String, lastName: String) {
         viewModelScope.launch {
             profileUseCases.insertProfile(
@@ -33,6 +19,10 @@ class CreateProfileViewModel @Inject constructor(
                 lastName = lastName
             )
         }
+    }
+
+    fun onCliclickSave() {
+        insertProfile("A","C")
     }
 
 }

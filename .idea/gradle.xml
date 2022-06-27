@@ -21,7 +21,6 @@
             <option value="$PROJECT_DIR$/app/features/share/publ" />
             <option value="$PROJECT_DIR$/buildSrc" />
             <option value="$PROJECT_DIR$/core" />
-            <option value="$PROJECT_DIR$/core_android" />
             <option value="$PROJECT_DIR$/network" />
           </set>
         </option>
