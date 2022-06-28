@@ -5,9 +5,9 @@ import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
-import pontinisystems.myearnings.features.share.impl.infra.database.Database
-import pontinisystems.myearnings.features.share.impl.infra.repositories.ProfileRepositoryImpl
-import pontinisystems.myearnings.features.share.impl.infra.repositories.StockRepositoryImpl
+import pontinisystems.myearnings.features.share.impl.data.database.Database
+import pontinisystems.myearnings.features.share.impl.data.repository.ProfileRepositoryImpl
+import pontinisystems.myearnings.features.share.impl.data.repository.StockRepositoryImpl
 import pontinisystems.myearnings.features.share.publ.domain.repository.ProfileRepository
 import pontinisystems.myearnings.features.share.publ.domain.repository.StockRepository
 import javax.inject.Singleton

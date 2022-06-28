@@ -1,8 +1,8 @@
-package pontinisystems.myearnings.features.share.impl.infra.repositories
+package pontinisystems.myearnings.features.share.impl.data.repository
 
 import android.util.Log
-import pontinisystems.myearnings.features.share.impl.infra.database.dao.ProfileDao
-import pontinisystems.myearnings.features.share.impl.infra.database.entities.ProfileEntity
+import pontinisystems.myearnings.features.share.impl.data.database.dao.ProfileDao
+import pontinisystems.myearnings.features.share.impl.data.database.entities.ProfileEntity
 import pontinisystems.myearnings.features.share.publ.domain.repository.ProfileRepository
 
 class ProfileRepositoryImpl(

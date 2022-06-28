@@ -1,8 +1,8 @@
-package pontinisystems.myearnings.features.share.impl.infra.database.dao
+package pontinisystems.myearnings.features.share.impl.data.database.dao
 
 import androidx.room.*
-import pontinisystems.myearnings.features.share.impl.infra.database.entities.StockEntity
-import pontinisystems.myearnings.features.share.impl.infra.database.relations.StockWithEarningsEntity
+import pontinisystems.myearnings.features.share.impl.data.database.entities.StockEntity
+import pontinisystems.myearnings.features.share.impl.data.database.relations.StockWithEarningsEntity
 
 @Dao
 interface StockDao {

@@ -1,4 +1,4 @@
-package pontinisystems.myearnings.features.share.publ.domain.entities
+package pontinisystems.myearnings.features.share.publ.domain.entity
 
 data class Stock(
     val symbol: String,

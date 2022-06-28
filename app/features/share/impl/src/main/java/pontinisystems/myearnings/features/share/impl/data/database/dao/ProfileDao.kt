@@ -1,7 +1,7 @@
-package pontinisystems.myearnings.features.share.impl.infra.database.dao
+package pontinisystems.myearnings.features.share.impl.data.database.dao
 
 import androidx.room.*
-import pontinisystems.myearnings.features.share.impl.infra.database.entities.ProfileEntity
+import pontinisystems.myearnings.features.share.impl.data.database.entities.ProfileEntity
 
 @Dao
 interface ProfileDao {

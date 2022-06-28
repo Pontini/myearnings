@@ -1,9 +1,9 @@
-package pontinisystems.myearnings.features.share.impl.infra.database
+package pontinisystems.myearnings.features.share.impl.data.database
 
 import android.content.Context
 import androidx.room.Room
-import pontinisystems.myearnings.features.share.impl.infra.database.dao.ProfileDao
-import pontinisystems.myearnings.features.share.impl.infra.database.dao.StockDao
+import pontinisystems.myearnings.features.share.impl.data.database.dao.ProfileDao
+import pontinisystems.myearnings.features.share.impl.data.database.dao.StockDao
 
 class Database(context: Context) {
 

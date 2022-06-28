@@ -1,10 +1,10 @@
-package pontinisystems.myearnings.features.share.impl.infra.database.relations
+package pontinisystems.myearnings.features.share.impl.data.database.relations
 
 import androidx.room.Embedded
 import androidx.room.Entity
 import androidx.room.Relation
-import pontinisystems.myearnings.features.share.impl.infra.database.entities.EarningEntity
-import pontinisystems.myearnings.features.share.impl.infra.database.entities.StockEntity
+import pontinisystems.myearnings.features.share.impl.data.database.entities.EarningEntity
+import pontinisystems.myearnings.features.share.impl.data.database.entities.StockEntity
 
 @Entity(tableName = "Stock_with_earnings")
 data class StockWithEarningsEntity(
