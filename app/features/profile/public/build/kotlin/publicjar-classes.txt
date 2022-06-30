@@ -1,0 +1,1 @@
+/Users/ewerton.pontini/Documents/developer/picpayandroid/myearnings/app/features/profile/public/build/classes/kotlin/main/pontinisystems/myearnings/features/profile/public/domain/usecase/InsertProfileUseCase.class

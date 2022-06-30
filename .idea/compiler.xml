@@ -50,9 +50,14 @@
       <module name="MyEarnings.app" target="11" />
       <module name="MyEarnings.app.design_system" target="11" />
       <module name="MyEarnings.app.features.profile.impl" target="11" />
+      <module name="MyEarnings.app.features.select_stock.impl" target="11" />
+      <module name="MyEarnings.app.features.select_stock.publicAndroid" target="11" />
       <module name="MyEarnings.app.features.share.impl" target="11" />
-      <module name="myearnings.buildSrc" target="11" />
+      <module name="MyEarnings.app.features.share.publicAndroid" target="11" />
+      <module name="MyEarnings.app.features.stock.impl" target="11" />
+      <module name="MyEarnings.app.features.stock.publicAndroid" target="11" />
       <module name="MyEarnings.buildSrc" target="11" />
+      <module name="myearnings.buildSrc" target="11" />
       <module name="MyEarnings.buildSrc.main" target="11" />
       <module name="MyEarnings.buildSrc.test" target="11" />
       <module name="MyEarnings.core" target="1.8" />

@@ -50,7 +50,6 @@ android {
 dependencies {
 
     implementation(project(mapOf("path" to ":core")))
-    implementation(project(mapOf("path" to ":app:features:profile:publ")))
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
 
