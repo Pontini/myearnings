@@ -1,7 +1,6 @@
 package pontinisystems.myearnings.features.share.publicAndroid.data.database.dao;
 
 import androidx.room.CoroutinesRoom;
-import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteStatement;
@@ -15,7 +14,6 @@ import java.lang.SuppressWarnings;
 import java.util.Collections;
 import java.util.List;
 import java.util.concurrent.Callable;
-import kotlin.Unit;
 import kotlin.coroutines.Continuation;
 import pontinisystems.myearnings.features.share.publicAndroid.data.database.entities.ProfileEntity;
 
@@ -24,8 +22,6 @@ public final class ProfileDao_Impl implements ProfileDao {
   private final RoomDatabase __db;
 
   private final EntityInsertionAdapter<ProfileEntity> __insertionAdapterOfProfileEntity;
-
-  private final EntityDeletionOrUpdateAdapter<ProfileEntity> __deletionAdapterOfProfileEntity;
 
   public ProfileDao_Impl(RoomDatabase __db) {
     this.__db = __db;
@@ -50,17 +46,6 @@ public final class ProfileDao_Impl implements ProfileDao {
         }
       }
     };
-    this.__deletionAdapterOfProfileEntity = new EntityDeletionOrUpdateAdapter<ProfileEntity>(__db) {
-      @Override
-      public String createQuery() {
-        return "DELETE FROM `profile` WHERE `id` = ?";
-      }
-
-      @Override
-      public void bind(SupportSQLiteStatement stmt, ProfileEntity value) {
-        stmt.bindLong(1, value.getId());
-      }
-    };
   }
 
   @Override
@@ -73,23 +58,6 @@ public final class ProfileDao_Impl implements ProfileDao {
           long _result = __insertionAdapterOfProfileEntity.insertAndReturnId(data);
           __db.setTransactionSuccessful();
           return _result;
-        } finally {
-          __db.endTransaction();
-        }
-      }
-    }, continuation);
-  }
-
-  @Override
-  public Object delete(final ProfileEntity data, final Continuation<? super Unit> continuation) {
-    return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
-      @Override
-      public Unit call() throws Exception {
-        __db.beginTransaction();
-        try {
-          __deletionAdapterOfProfileEntity.handle(data);
-          __db.setTransactionSuccessful();
-          return Unit.INSTANCE;
         } finally {
           __db.endTransaction();
         }

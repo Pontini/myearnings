@@ -1,7 +1,6 @@
 
 package pontinisystems.myearnings.features.profile.impl.data.repository
 
-import android.util.Log
 import pontinisystems.myearnings.features.profile.impl.domain.repository.ProfileRepository
 import pontinisystems.myearnings.features.share.publicAndroid.data.database.dao.ProfileDao
 import pontinisystems.myearnings.features.share.publicAndroid.data.database.entities.ProfileEntity
@@ -14,7 +13,6 @@ class ProfileRepositoryImpl  @Inject constructor(
         return try {
             val profileEntity = ProfileEntity(id = 1, name = name, lastName = lastName)
             val result = profileDao.insert(profileEntity)
-            Log.i("AAA", "A$result")
             Result.success(Unit)
         } catch (e: Throwable) {
             Result.failure(e)
