@@ -1,27 +1,29 @@
 package pontinisystems.myearnings.features.profile.impl.di
 
-import dagger.Binds
 import dagger.Module
+import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
+import pontinisystems.myearnings.features.profile.domain.usecase.InsertProfileUseCase
 import pontinisystems.myearnings.features.profile.impl.data.repository.ProfileRepositoryImpl
 import pontinisystems.myearnings.features.profile.impl.domain.usecase.InsertProfileUseCaseImpl
 import pontinisystems.myearnings.features.profile.impl.domain.repository.ProfileRepository
+import pontinisystems.myearnings.features.share.publicAndroid.data.database.Database
 import javax.inject.Singleton
+
 
 @Module
 @InstallIn(SingletonComponent::class)
-abstract class ProfileDependency {
-
-    @Binds
+object ProfileDependency {
+    @Provides
     @Singleton
-    abstract fun bindProfileRepository(
-        profileRepository: ProfileRepositoryImpl
-    ): ProfileRepository
+    fun provideInsertProfileUseCase(profileRepository: ProfileRepository): InsertProfileUseCase {
+        return InsertProfileUseCaseImpl(profileRepository)
+    }
 
-    @Binds
+    @Provides
     @Singleton
-    abstract fun bindInsertProfileUseCase(
-        insertProfileUseCase: InsertProfileUseCaseImpl
-    ): InsertProfileUseCaseImpl
+    fun provideProfileRepository(db: Database): ProfileRepository {
+        return ProfileRepositoryImpl(db.profileDao())
+    }
 }

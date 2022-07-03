@@ -33,7 +33,6 @@
           <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.google.errorprone/javac-shaded/9-dev-r4023-3/72b688efd290280a0afde5f9892b0fde6f362d1d/javac-shaded-9-dev-r4023-3.jar" />
         </processorPath>
         <module name="MyEarnings.network.main" />
-        <module name="MyEarnings.core.main" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel target="1.7">
@@ -53,7 +52,7 @@
       <module name="MyEarnings.app.features.select_stock.impl" target="11" />
       <module name="MyEarnings.app.features.select_stock.publicAndroid" target="11" />
       <module name="MyEarnings.app.features.share.impl" target="11" />
-      <module name="MyEarnings.app.features.share.publicAndroid" target="11" />
+      <module name="MyEarnings.app.features.share.publAndroid" target="11" />
       <module name="MyEarnings.app.features.stock.impl" target="11" />
       <module name="MyEarnings.app.features.stock.publicAndroid" target="11" />
       <module name="MyEarnings.buildSrc" target="11" />

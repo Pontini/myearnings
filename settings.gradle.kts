@@ -6,12 +6,11 @@ include(
     ":app:features:share:impl",
     ":app:features:stock:impl",
     ":app:features:stock:publicAndroid",
-    ":app:features:stock:public",
-    ":app:features:share:public",
-    ":app:features:share:publicAndroid",
-    ":app:features:profile:public",
+    ":app:features:stock:publ",
+    ":app:features:share:publ",
+    ":app:features:share:publAndroid",
+    ":app:features:profile:publ",
     ":network",
-    "core"
 )
 
 rootProject.name = "MyEarnings"

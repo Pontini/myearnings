@@ -15,17 +15,16 @@
             <option value="$PROJECT_DIR$/app/features" />
             <option value="$PROJECT_DIR$/app/features/profile" />
             <option value="$PROJECT_DIR$/app/features/profile/impl" />
-            <option value="$PROJECT_DIR$/app/features/profile/public" />
+            <option value="$PROJECT_DIR$/app/features/profile/publ" />
             <option value="$PROJECT_DIR$/app/features/share" />
             <option value="$PROJECT_DIR$/app/features/share/impl" />
-            <option value="$PROJECT_DIR$/app/features/share/public" />
-            <option value="$PROJECT_DIR$/app/features/share/publicAndroid" />
+            <option value="$PROJECT_DIR$/app/features/share/publ" />
+            <option value="$PROJECT_DIR$/app/features/share/publAndroid" />
             <option value="$PROJECT_DIR$/app/features/stock" />
             <option value="$PROJECT_DIR$/app/features/stock/impl" />
-            <option value="$PROJECT_DIR$/app/features/stock/public" />
+            <option value="$PROJECT_DIR$/app/features/stock/publ" />
             <option value="$PROJECT_DIR$/app/features/stock/publicAndroid" />
             <option value="$PROJECT_DIR$/buildSrc" />
-            <option value="$PROJECT_DIR$/core" />
             <option value="$PROJECT_DIR$/network" />
           </set>
         </option>

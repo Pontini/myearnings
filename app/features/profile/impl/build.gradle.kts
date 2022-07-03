@@ -49,10 +49,9 @@ android {
 
 dependencies {
 
-    implementation(project(mapOf("path" to ":core")))
-    implementation(project(mapOf("path" to ":app:features:profile:public")))
-    implementation(project(mapOf("path" to ":app:features:share:public")))
-    implementation(project(mapOf("path" to ":app:features:share:publicAndroid")))
+    implementation(project(mapOf("path" to ":app:features:profile:publ")))
+    implementation(project(mapOf("path" to ":app:features:share:publ")))
+    implementation(project(mapOf("path" to ":app:features:share:publAndroid")))
     implementation(project(mapOf("path" to ":app:design_system")))
 
     implementation("org.jetbrains.kotlin:kotlin-stdlib:${rootProject.extra["kotlin_version"]}")
