@@ -1,0 +1,1 @@
+/Users/ewerton.pontini/Documents/developer/picpayandroid/myearnings/app/features/stock/publ/build/classes/kotlin/main/pontinisystems/myearnings/features/stock/domain/model/Stock.class:/Users/ewerton.pontini/Documents/developer/picpayandroid/myearnings/app/features/stock/publ/build/classes/kotlin/main/pontinisystems/myearnings/features/stock/domain/repository/StockRepository.class

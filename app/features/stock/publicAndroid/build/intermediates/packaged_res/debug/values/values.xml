@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="dashboard">Dashboard</string>
+    <string name="insert_profile">Cadastro de perfil</string>
+    <string name="last_name">Sobrenome</string>
+    <string name="name">Nome</string>
+    <string name="save">Salvar</string>
+    <string name="title_activity_create_profile">CreateProfileActivity</string>
+    <style name="Theme.MyEarnings" parent="android:Theme.Material.Light.NoActionBar">
+        <item name="android:statusBarColor">@color/purple_700</item>
+    </style>
+</resources>

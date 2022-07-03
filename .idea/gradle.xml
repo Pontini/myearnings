@@ -1,12 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="GradleMigrationSettings" migrationVersion="1" />
   <component name="GradleSettings">
     <option name="linkedExternalProjectsSettings">
       <GradleProjectSettings>
         <option name="testRunner" value="GRADLE" />
         <option name="distributionType" value="DEFAULT_WRAPPED" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="resolveModulePerSourceSet" value="false" />
+        <option name="modules">
+          <set>
+            <option value="$PROJECT_DIR$" />
+            <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/app/design_system" />
+            <option value="$PROJECT_DIR$/app/features" />
+            <option value="$PROJECT_DIR$/app/features/profile" />
+            <option value="$PROJECT_DIR$/app/features/profile/impl" />
+            <option value="$PROJECT_DIR$/app/features/profile/publ" />
+            <option value="$PROJECT_DIR$/app/features/share" />
+            <option value="$PROJECT_DIR$/app/features/share/impl" />
+            <option value="$PROJECT_DIR$/app/features/share/publ" />
+            <option value="$PROJECT_DIR$/app/features/share/publAndroid" />
+            <option value="$PROJECT_DIR$/app/features/stock" />
+            <option value="$PROJECT_DIR$/app/features/stock/impl" />
+            <option value="$PROJECT_DIR$/app/features/stock/publ" />
+            <option value="$PROJECT_DIR$/app/features/stock/publicAndroid" />
+            <option value="$PROJECT_DIR$/buildSrc" />
+            <option value="$PROJECT_DIR$/network" />
+          </set>
+        </option>
       </GradleProjectSettings>
     </option>
   </component>

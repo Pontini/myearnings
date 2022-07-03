@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">myearnings</string>
+    <string name="app_name">Doctor Brewer</string>
+    <string name="title_activity_navigation_bottom_main">NavigationBottomMainActivity</string>
 </resources>
