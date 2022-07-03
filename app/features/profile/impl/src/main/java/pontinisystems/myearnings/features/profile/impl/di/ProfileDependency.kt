@@ -8,7 +8,7 @@ import pontinisystems.myearnings.features.profile.domain.usecase.InsertProfileUs
 import pontinisystems.myearnings.features.profile.impl.data.repository.ProfileRepositoryImpl
 import pontinisystems.myearnings.features.profile.impl.domain.usecase.InsertProfileUseCaseImpl
 import pontinisystems.myearnings.features.profile.impl.domain.repository.ProfileRepository
-import pontinisystems.myearnings.features.share.publicAndroid.data.database.Database
+import pontinisystems.myearnings.features.share.data.database.Database
 import javax.inject.Singleton
 
 

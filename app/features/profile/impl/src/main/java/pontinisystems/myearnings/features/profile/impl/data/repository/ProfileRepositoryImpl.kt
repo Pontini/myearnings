@@ -2,8 +2,8 @@
 package pontinisystems.myearnings.features.profile.impl.data.repository
 
 import pontinisystems.myearnings.features.profile.impl.domain.repository.ProfileRepository
-import pontinisystems.myearnings.features.share.publicAndroid.data.database.dao.ProfileDao
-import pontinisystems.myearnings.features.share.publicAndroid.data.database.entities.ProfileEntity
+import pontinisystems.myearnings.features.share.data.database.dao.ProfileDao
+import pontinisystems.myearnings.features.share.data.database.entities.ProfileEntity
 import javax.inject.Inject
 
 class ProfileRepositoryImpl  @Inject constructor(

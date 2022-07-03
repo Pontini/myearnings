@@ -27,10 +27,10 @@ import java.util.HashSet;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
-import pontinisystems.myearnings.features.share.publicAndroid.data.database.dao.ProfileDao;
-import pontinisystems.myearnings.features.share.publicAndroid.data.database.dao.ProfileDao_Impl;
-import pontinisystems.myearnings.features.share.publicAndroid.data.database.dao.StockDao;
-import pontinisystems.myearnings.features.share.publicAndroid.data.database.dao.StockDao_Impl;
+import pontinisystems.myearnings.features.share.data.database.dao.ProfileDao;
+import pontinisystems.myearnings.features.share.data.database.dao.ProfileDao_Impl;
+import pontinisystems.myearnings.features.share.data.database.dao.StockDao;
+import pontinisystems.myearnings.features.share.data.database.dao.StockDao_Impl;
 
 @SuppressWarnings({"unchecked", "deprecation"})
 public final class DataBaseBuilder_Impl extends DataBaseBuilder {
@@ -100,7 +100,7 @@ public final class DataBaseBuilder_Impl extends DataBaseBuilder {
         final TableInfo _infoStock = new TableInfo("stock", _columnsStock, _foreignKeysStock, _indicesStock);
         final TableInfo _existingStock = TableInfo.read(_db, "stock");
         if (! _infoStock.equals(_existingStock)) {
-          return new RoomOpenHelper.ValidationResult(false, "stock(pontinisystems.myearnings.features.share.publicAndroid.data.database.entities.StockEntity).\n"
+          return new RoomOpenHelper.ValidationResult(false, "stock(pontinisystems.myearnings.features.share.data.database.entities.StockEntity).\n"
                   + " Expected:\n" + _infoStock + "\n"
                   + " Found:\n" + _existingStock);
         }
@@ -111,7 +111,7 @@ public final class DataBaseBuilder_Impl extends DataBaseBuilder {
         final TableInfo _infoEarning = new TableInfo("earning", _columnsEarning, _foreignKeysEarning, _indicesEarning);
         final TableInfo _existingEarning = TableInfo.read(_db, "earning");
         if (! _infoEarning.equals(_existingEarning)) {
-          return new RoomOpenHelper.ValidationResult(false, "earning(pontinisystems.myearnings.features.share.publicAndroid.data.database.entities.EarningEntity).\n"
+          return new RoomOpenHelper.ValidationResult(false, "earning(pontinisystems.myearnings.features.share.data.database.entities.EarningEntity).\n"
                   + " Expected:\n" + _infoEarning + "\n"
                   + " Found:\n" + _existingEarning);
         }
@@ -124,7 +124,7 @@ public final class DataBaseBuilder_Impl extends DataBaseBuilder {
         final TableInfo _infoProfile = new TableInfo("profile", _columnsProfile, _foreignKeysProfile, _indicesProfile);
         final TableInfo _existingProfile = TableInfo.read(_db, "profile");
         if (! _infoProfile.equals(_existingProfile)) {
-          return new RoomOpenHelper.ValidationResult(false, "profile(pontinisystems.myearnings.features.share.publicAndroid.data.database.entities.ProfileEntity).\n"
+          return new RoomOpenHelper.ValidationResult(false, "profile(pontinisystems.myearnings.features.share.data.database.entities.ProfileEntity).\n"
                   + " Expected:\n" + _infoProfile + "\n"
                   + " Found:\n" + _existingProfile);
         }

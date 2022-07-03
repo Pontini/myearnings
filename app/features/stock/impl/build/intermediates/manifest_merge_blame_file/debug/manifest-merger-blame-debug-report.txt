@@ -1,0 +1,15 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="pontinisystems.myearnings.features.stock.impl" >
+4
+5    <uses-sdk
+6        android:minSdkVersion="29"
+6-->/Users/ewerton.pontini/Documents/developer/picpayandroid/myearnings/app/features/stock/impl/src/main/AndroidManifest.xml
+7        android:targetSdkVersion="31" />
+7-->/Users/ewerton.pontini/Documents/developer/picpayandroid/myearnings/app/features/stock/impl/src/main/AndroidManifest.xml
+8
+9    <application>
+9-->/Users/ewerton.pontini/Documents/developer/picpayandroid/myearnings/app/features/stock/impl/src/main/AndroidManifest.xml:5:5-7:19
+10    </application>
+11
+12</manifest>
