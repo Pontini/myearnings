@@ -28,12 +28,16 @@ public final class ProfileDao_Impl implements ProfileDao {
     this.__insertionAdapterOfProfileEntity = new EntityInsertionAdapter<ProfileEntity>(__db) {
       @Override
       public String createQuery() {
-        return "INSERT OR REPLACE INTO `profile` (`id`,`name`,`lastName`) VALUES (nullif(?, 0),?,?)";
+        return "INSERT OR REPLACE INTO `profile` (`id`,`name`,`lastName`) VALUES (?,?,?)";
       }
 
       @Override
       public void bind(SupportSQLiteStatement stmt, ProfileEntity value) {
-        stmt.bindLong(1, value.getId());
+        if (value.getId() == null) {
+          stmt.bindNull(1);
+        } else {
+          stmt.bindLong(1, value.getId());
+        }
         if (value.getName() == null) {
           stmt.bindNull(2);
         } else {

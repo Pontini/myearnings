@@ -41,7 +41,7 @@ fun ComponentProfileFormFieldSession(activity: ComponentActivity) {
         },
         bottomBar = {
             Button(onClick = {
-              //  viewModel.onCliclickSave()
+                viewModel.onClickSave()
             }, modifier = Modifier.fillMaxWidth()) {
                 Text(text = activity.getString(R.string.save))
             }

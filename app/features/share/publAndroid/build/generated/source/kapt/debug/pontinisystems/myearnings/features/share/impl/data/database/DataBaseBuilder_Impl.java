@@ -45,9 +45,9 @@ public final class DataBaseBuilder_Impl extends DataBaseBuilder {
       public void createAllTables(SupportSQLiteDatabase _db) {
         _db.execSQL("CREATE TABLE IF NOT EXISTS `stock` (`id` TEXT NOT NULL, PRIMARY KEY(`id`))");
         _db.execSQL("CREATE TABLE IF NOT EXISTS `earning` (`id` TEXT NOT NULL, PRIMARY KEY(`id`))");
-        _db.execSQL("CREATE TABLE IF NOT EXISTS `profile` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `lastName` TEXT NOT NULL)");
+        _db.execSQL("CREATE TABLE IF NOT EXISTS `profile` (`id` INTEGER PRIMARY KEY AUTOINCREMENT, `name` TEXT NOT NULL, `lastName` TEXT NOT NULL)");
         _db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '448f656c3a87c1d4a54fce7e2506e753')");
+        _db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '3c251c0e268a01961473fa44e0d1dadf')");
       }
 
       @Override
@@ -116,7 +116,7 @@ public final class DataBaseBuilder_Impl extends DataBaseBuilder {
                   + " Found:\n" + _existingEarning);
         }
         final HashMap<String, TableInfo.Column> _columnsProfile = new HashMap<String, TableInfo.Column>(3);
-        _columnsProfile.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsProfile.put("id", new TableInfo.Column("id", "INTEGER", false, 1, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsProfile.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         _columnsProfile.put("lastName", new TableInfo.Column("lastName", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
         final HashSet<TableInfo.ForeignKey> _foreignKeysProfile = new HashSet<TableInfo.ForeignKey>(0);
@@ -130,7 +130,7 @@ public final class DataBaseBuilder_Impl extends DataBaseBuilder {
         }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "448f656c3a87c1d4a54fce7e2506e753", "8134e4929a648c1615e8e05b212e7ab8");
+    }, "3c251c0e268a01961473fa44e0d1dadf", "4d29320c7a3307cd6b57cf845e14cc1e");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(configuration.context)
         .name(configuration.name)
         .callback(_openCallback)
