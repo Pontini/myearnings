@@ -1,8 +1,8 @@
-package pontinisystems.myearnings.features.share.impl.data.database
+package pontinisystems.myearnings.features.share.data.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import pontinisystems.myearnings.features.share.impl.data.database.DataBaseBuilder.Companion.DB_VERSION
+import pontinisystems.myearnings.features.share.data.database.DataBaseBuilder.Companion.DB_VERSION
 import pontinisystems.myearnings.features.share.data.database.dao.ProfileDao
 import pontinisystems.myearnings.features.share.data.database.dao.StockDao
 import pontinisystems.myearnings.features.share.data.database.entities.EarningEntity

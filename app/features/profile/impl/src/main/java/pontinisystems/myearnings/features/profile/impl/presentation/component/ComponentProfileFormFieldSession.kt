@@ -1,5 +1,6 @@
 package pontinisystems.myearnings.features.profile.impl.presentation.component
 
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
@@ -15,6 +16,10 @@ import pontinisystems.myearnings.features.profile.impl.presentation.viewmodel.Cr
 @Composable
 fun ComponentProfileFormFieldSession(activity: ComponentActivity) {
     val viewModel: CreateProfileViewModel = hiltViewModel()
+
+    val name = remember { TextFieldState() }
+    val lastName = remember { TextFieldState() }
+
     Scaffold(
         topBar = {
             TopAppBar(
@@ -33,14 +38,19 @@ fun ComponentProfileFormFieldSession(activity: ComponentActivity) {
             ) {
                 ComponentProfileFormField(
                     labelName = activity.getString(R.string.name),
+                    name
                 )
                 ComponentProfileFormField(
                     labelName = activity.getString(R.string.last_name),
+                    textFieldState = lastName,
                 )
             }
         },
         bottomBar = {
             Button(onClick = {
+                Log.i("Ewerton Pontini", "name: " + name.text)
+                Log.i("Ewerton Pontini", "name: " + lastName.text)
+
                 viewModel.onClickSave()
             }, modifier = Modifier.fillMaxWidth()) {
                 Text(text = activity.getString(R.string.save))
@@ -51,3 +61,32 @@ fun ComponentProfileFormFieldSession(activity: ComponentActivity) {
 
 }
 
+
+@Composable
+fun SnackbarDemo() {
+    val scaffoldState = rememberScaffoldState() // this contains the `SnackbarHostState`
+    val (showSnackBar, setShowSnackBar) = remember {
+        mutableStateOf(false)
+    }
+    if (showSnackBar) {
+        LaunchedEffect(scaffoldState.snackbarHostState) {
+            // Show snackbar using a coroutine, when the coroutine is cancelled the
+            // snackbar will automatically dismiss. This coroutine will cancel whenever
+            // `showSnackBar` is false, and only start when `showSnackBar` is true
+            // (due to the above if-check), or if `scaffoldState.snackbarHostState` changes.
+            val result = scaffoldState.snackbarHostState.showSnackbar(
+                message = "Error message",
+                actionLabel = "Retry message"
+            )
+            when (result) {
+                SnackbarResult.Dismissed -> {
+                    setShowSnackBar(false)
+                }
+                SnackbarResult.ActionPerformed -> {
+                    setShowSnackBar(false)
+                    // perform action here
+                }
+            }
+        }
+    }
+}

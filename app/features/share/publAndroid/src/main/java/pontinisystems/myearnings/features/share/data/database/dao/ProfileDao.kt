@@ -5,8 +5,6 @@ import pontinisystems.myearnings.features.share.data.database.entities.ProfileEn
 
 @Dao
 interface ProfileDao {
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     suspend fun insert(data: ProfileEntity): Long
-
 }

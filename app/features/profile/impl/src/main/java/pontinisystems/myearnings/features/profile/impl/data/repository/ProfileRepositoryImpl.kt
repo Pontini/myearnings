@@ -14,17 +14,8 @@ class ProfileRepositoryImpl @Inject constructor(
             val profile = ProfileEntity(name = name, lastName = lastName)
             profileDataSource.insert(profile)
             Result.success(Unit)
-        } catch (e: ProfileError) {
-            when(e){
-                is ProfileError.InsertEntityException -> {
-                    Result.failure(ProfileError.InsertEntityException(""))
-                }
-                is ProfileError.Unknown -> {
-                    Result.failure(ProfileError.Unknown(""))
-                }
-            }
         } catch (e: Exception) {
-            Result.failure(ProfileError.Unknown(""))
+            Result.failure(ProfileError.InsertProfileException("Failed to register profile."))
         }
     }
 }

@@ -2,7 +2,6 @@ package pontinisystems.myearnings.features.share.data.database
 
 import android.content.Context
 import androidx.room.Room
-import pontinisystems.myearnings.features.share.impl.data.database.DataBaseBuilder
 import pontinisystems.myearnings.features.share.data.database.dao.ProfileDao
 import pontinisystems.myearnings.features.share.data.database.dao.StockDao
 
@@ -14,7 +13,6 @@ class Database(context: Context) {
 
     private val db = Room.databaseBuilder(context, DataBaseBuilder::class.java, DB_NAME)
         .fallbackToDestructiveMigration().build()
-
 
     fun stockDao(): StockDao {
         return db.stockDao()

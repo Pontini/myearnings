@@ -12,8 +12,9 @@ class ProfileDataSourceImpl @Inject constructor(private val profileDao: ProfileD
     override suspend fun insert(profile: ProfileEntity): Long {
         try {
             return profileDao.insert(profile)
-        } catch (e: Exception) {
-            throw ProfileError.InsertEntityException("There was an error registering user")
+        } catch (e: Throwable) {
+            println(e.message)
+            throw e
         }
     }
 }
