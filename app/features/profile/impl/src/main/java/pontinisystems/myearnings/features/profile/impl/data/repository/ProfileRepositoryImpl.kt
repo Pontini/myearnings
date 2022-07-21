@@ -3,7 +3,7 @@ package pontinisystems.myearnings.features.profile.impl.data.repository
 import pontinisystems.myearnings.features.profile.impl.domain.repository.ProfileRepository
 import pontinisystems.myearnings.features.share.data.database.entities.ProfileEntity
 import pontinisystems.myearnings.features.profile.impl.data.datasource.ProfileDataSource
-import pontinisystems.myearnings.features.share.data.database.error.ProfileError
+import pontinisystems.myearnings.features.profile.impl.domain.error.ProfileError
 import javax.inject.Inject
 
 class ProfileRepositoryImpl @Inject constructor(

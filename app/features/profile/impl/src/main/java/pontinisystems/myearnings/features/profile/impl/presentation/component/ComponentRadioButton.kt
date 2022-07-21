@@ -24,7 +24,7 @@ fun ComponentRadioButton(
             Row() {
                 RadioButton(selected = selectedDefault == it, onClick = { onValueChange(it)})
                 Text(
-                    text = it.description(),
+                    text = it.getDescription(),
                     modifier = Modifier
                         .clickable(onClick = { onValueChange(it) })
                         .padding(start = 4.dp)

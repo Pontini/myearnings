@@ -6,7 +6,7 @@ import javax.inject.Inject
 
 class InsertProfileUseCaseImpl @Inject constructor(private val profileRepository: ProfileRepository) :
     InsertProfileUseCase {
-    override suspend fun invoke(name: String, lastName: String): Result<Unit> {
+    override suspend fun invoke(name: String, lastName: String, gender: String): Result<Unit> {
         return profileRepository.insert(name, lastName)
     }
 

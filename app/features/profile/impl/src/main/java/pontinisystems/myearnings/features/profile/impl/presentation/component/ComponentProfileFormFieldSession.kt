@@ -10,6 +10,7 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import pontinisystems.myearnings.design_system.theme.colorTeal500
 import pontinisystems.myearnings.features.profile.impl.R
+import pontinisystems.myearnings.features.profile.impl.presentation.model.GenderType
 import pontinisystems.myearnings.features.profile.impl.presentation.viewmodel.CreateProfileViewModel
 
 @Composable
@@ -19,6 +20,7 @@ fun ComponentProfileFormFieldSession(activity: ComponentActivity) {
     val name = viewModel.name.collectAsState().value
     val lastName = viewModel.lastName.collectAsState().value
     val selectGenderType = viewModel.selectGenderType.collectAsState().value
+    val isButtonSaveEnable = viewModel.isButtonSaveEnable.collectAsState().value
     val list = viewModel.listGenderType
 
     Scaffold(
@@ -60,7 +62,7 @@ fun ComponentProfileFormFieldSession(activity: ComponentActivity) {
                     selectedDefault = selectGenderType,
                     label = "Selecione o Genero",
                     onValueChange = {
-                        viewModel.onChangeGender(it)
+                        viewModel.onChangeGender(it as GenderType)
                     }
                 )
             }
@@ -68,7 +70,9 @@ fun ComponentProfileFormFieldSession(activity: ComponentActivity) {
         bottomBar = {
             Button(onClick = {
                 viewModel.onClickCreateProfile()
-            }, modifier = Modifier.fillMaxWidth().size(64.dp)) {
+            }, modifier = Modifier.fillMaxWidth().size(64.dp),
+                enabled = isButtonSaveEnable,
+                ) {
                 Text(text = activity.getString(R.string.save))
             }
         },

@@ -74,7 +74,7 @@ public final class StockDao_Impl implements StockDao {
   }
 
   @Override
-  public Object insert(final StockEntity data, final Continuation<? super Long> arg1) {
+  public Object insert(final StockEntity data, final Continuation<? super Long> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Long>() {
       @Override
       public Long call() throws Exception {
@@ -87,11 +87,11 @@ public final class StockDao_Impl implements StockDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object delete(final StockEntity data, final Continuation<? super Unit> arg1) {
+  public Object delete(final StockEntity data, final Continuation<? super Unit> continuation) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
       public Unit call() throws Exception {
@@ -104,11 +104,11 @@ public final class StockDao_Impl implements StockDao {
           __db.endTransaction();
         }
       }
-    }, arg1);
+    }, continuation);
   }
 
   @Override
-  public Object selectAll(final Continuation<? super List<StockEntity>> arg0) {
+  public Object selectAll(final Continuation<? super List<StockEntity>> continuation) {
     final String _sql = "SELECT * FROM `stock`";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -142,12 +142,12 @@ public final class StockDao_Impl implements StockDao {
           __db.endTransaction();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   @Override
   public Object getStockWithEarnings(
-      final Continuation<? super List<StockWithEarningsEntity>> arg0) {
+      final Continuation<? super List<StockWithEarningsEntity>> continuation) {
     final String _sql = "SELECT * FROM earning";
     final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 0);
     final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
@@ -204,7 +204,7 @@ public final class StockDao_Impl implements StockDao {
           __db.endTransaction();
         }
       }
-    }, arg0);
+    }, continuation);
   }
 
   public static List<Class<?>> getRequiredConverters() {
