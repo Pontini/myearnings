@@ -8,24 +8,29 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun ComponentProfileFormField(
+fun ComponentTextField(
     labelName: String,
-    textFieldState: TextFieldState,
+    textFieldState: String,
+    isError: Boolean,
+    onValueChange: (String) -> Unit,
 ) {
-    TextField(labelName,textFieldState)
+    TextField(labelName, onValueChange, textFieldState, isError)
     Spacer(modifier = Modifier.padding(vertical = 4.dp))
 }
 
 @Composable
-fun TextField(label: String, textFieldState: TextFieldState) {
+fun TextField(
+    label: String,
+    onValueChange: (String) -> Unit,
+    textFieldState: String,
+    isError: Boolean
+) {
     OutlinedTextField(
-        value = textFieldState.text,
-        onValueChange = { textFieldState.text = it },
+        value = textFieldState,
+        onValueChange = onValueChange,
         modifier = Modifier.fillMaxWidth(),
-        label = { Text(label) }
+        label = { Text(label) },
+        isError = isError
     )
 }
 
-class TextFieldState(){
-    var text: String by mutableStateOf("")
-}

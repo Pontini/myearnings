@@ -53,7 +53,7 @@ public final class ProfileDao_Impl implements ProfileDao {
   }
 
   @Override
-  public Object insert(final ProfileEntity data, final Continuation<? super Long> continuation) {
+  public Object insert(final ProfileEntity data, final Continuation<? super Long> arg1) {
     return CoroutinesRoom.execute(__db, true, new Callable<Long>() {
       @Override
       public Long call() throws Exception {
@@ -66,7 +66,7 @@ public final class ProfileDao_Impl implements ProfileDao {
           __db.endTransaction();
         }
       }
-    }, continuation);
+    }, arg1);
   }
 
   public static List<Class<?>> getRequiredConverters() {

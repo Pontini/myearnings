@@ -1,6 +1,5 @@
 package pontinisystems.myearnings.features.profile.impl.di
 
-import dagger.Component
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

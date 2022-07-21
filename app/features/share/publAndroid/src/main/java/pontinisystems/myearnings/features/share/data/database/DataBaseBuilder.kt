@@ -16,6 +16,6 @@ abstract class DataBaseBuilder : RoomDatabase() {
     abstract fun profileDao(): ProfileDao
 
     companion object {
-        const val DB_VERSION = 500
+        const val DB_VERSION = 1000
     }
 }
