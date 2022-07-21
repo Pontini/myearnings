@@ -20,3 +20,5 @@ local.properties
 /app/features/profile/publ/build/
 /app/features/share/publ/build/
 /app/features/share/impl/build/
+app/features/stock/publ/build/kotlin/kaptGenerateStubsKotlin/build-history.bin
+app/features/stock/publ/build/kotlin/kaptGenerateStubsKotlin/last-build.bin
