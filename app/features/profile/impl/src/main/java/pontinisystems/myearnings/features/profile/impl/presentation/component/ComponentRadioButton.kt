@@ -13,7 +13,7 @@ import pontinisystems.myearnings.features.profile.impl.presentation.model.EnumOp
 @Composable
 fun ComponentRadioButton(
     listEnumOptions: List<EnumOptionType>,
-    selectDefault: EnumOptionType,
+    selectedDefault: EnumOptionType,
     label: String,
     onValueChange: (EnumOptionType) -> Unit,
 ) {
@@ -22,7 +22,7 @@ fun ComponentRadioButton(
         Spacer(modifier = Modifier.padding(top = 8.dp))
         listEnumOptions.forEach {
             Row() {
-                RadioButton(selected = selectDefault == it, onClick = { onValueChange(it)})
+                RadioButton(selected = selectedDefault == it, onClick = { onValueChange(it)})
                 Text(
                     text = it.description(),
                     modifier = Modifier

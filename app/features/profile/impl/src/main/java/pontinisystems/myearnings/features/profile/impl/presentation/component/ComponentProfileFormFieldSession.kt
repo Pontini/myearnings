@@ -57,19 +57,18 @@ fun ComponentProfileFormFieldSession(activity: ComponentActivity) {
 
                 ComponentRadioButton(
                     listEnumOptions = list,
-                    selectDefault = selectGenderType,
+                    selectedDefault = selectGenderType,
                     label = "Selecione o Genero",
                     onValueChange = {
-                        viewModel.onChangeGender(it )
+                        viewModel.onChangeGender(it)
                     }
                 )
-
             }
         },
         bottomBar = {
             Button(onClick = {
                 viewModel.onClickCreateProfile()
-            }, modifier = Modifier.fillMaxWidth()) {
+            }, modifier = Modifier.fillMaxWidth().size(64.dp)) {
                 Text(text = activity.getString(R.string.save))
             }
         },
