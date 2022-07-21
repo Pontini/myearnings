@@ -1,7 +1,7 @@
 buildscript{
 
     val kotlin_version by extra(Lib.Kotlin.version)
-    val compose_version by extra("1.0.1")
+    val compose_version by extra("1.5.0")
 
     repositories{
         google()
