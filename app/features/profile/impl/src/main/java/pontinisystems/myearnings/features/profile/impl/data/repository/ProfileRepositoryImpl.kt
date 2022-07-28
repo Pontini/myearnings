@@ -7,16 +7,13 @@ import pontinisystems.myearnings.features.profile.impl.domain.error.ProfileError
 import javax.inject.Inject
 
 class ProfileRepositoryImpl @Inject constructor(
-    private val profileDataSource: ProfileDataSource
+    private val profileDataSource: ProfileDataSource,
+    private val outroDataSource: ProfileDataSource,
 ) : ProfileRepository {
-    override suspend fun insert(name: String, lastName: String): Result<Unit> {
-        return try {
-            val profile = ProfileEntity(name = name, lastName = lastName)
-            profileDataSource.insert(profile)
-            Result.success(Unit)
-        } catch (e: Exception) {
-            Result.failure(ProfileError.InsertProfileException("Failed to register profile."))
-        }
+    override suspend fun insert(name: String, lastName: String) = runCatching {
+        val profile = ProfileEntity(name = name, lastName = lastName)
+        val outraInfo = outroDataSource.insert()
+        profileDataSource.insert(mapperData.map(profile))
+        Unit
     }
 }
-
